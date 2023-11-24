@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Router, Route, Routes } from 'react-router-dom';
-import ViewUser from './components/ViewUser';
-import AddCustomer from './components/AddCustomer';
-import UpdateUser from './components/UpdateUser';
-import DeleteUser from './components/DeleteCustomer';
+import ViewCustomer from './components/CustomerComponents/ViewCustomer';
+import AddCustomer from './components/CustomerComponents/AddCustomer';
+import UpdateCustomer from './components/CustomerComponents/UpdateCustomer';
+import DeleteCustomer from './components/CustomerComponents/DeleteCustomer';
 import Header from './components/Header';
 
 function App() {
@@ -14,11 +14,11 @@ function App() {
     <Header/>
     <BrowserRouter>
     <Routes>
-      <Route path = {"/"} element = {<ViewUser/>} exact={true}/>
-      <Route path = {"/viewusers"} element = {<ViewUser/>} exact={true}/>
+      <Route path = {"/"} element = {<ViewCustomer/>} exact={true}/>
+      <Route path = {"/viewcustomers"} element = {<ViewCustomer/>} exact={true}/>
       <Route path = {"/addcustomer"} element = {<AddCustomer/>} exact={true}/>
-      <Route path = {"/updateuser"} element = {<UpdateUser/>} exact={true}/>
-      <Route path = {"/deleteuser"} element = {<DeleteUser/>} exact={true}/>
+      <Route path = {"/updatecustomer"} element = {<UpdateCustomer/>} exact={true}/>
+      <Route path = {"/deletecustomer"} element = {<DeleteCustomer/>} exact={true}/>
     </Routes>
     </BrowserRouter>
     </>
