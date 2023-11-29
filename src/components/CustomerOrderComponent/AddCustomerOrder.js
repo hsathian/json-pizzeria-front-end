@@ -11,7 +11,6 @@ const AddCustomerOrder = () => {
     const handleEmployeeID = (e) => setEmployeeID(e.target.value);
     let handleViewCustomer = () =>{
         navigate({pathname: "/viewcustomers"})
-    
       }
 
     const handleSubmit = (e) => {
@@ -28,7 +27,7 @@ const AddCustomerOrder = () => {
         CustomerOrderService.addCustomerOrder(customerOrder)
             .then(() => {
                 alert("Customer Order has been added successfully!");
-                navigate({ pathname: "/viewcustomers" });
+                navigate({pathname : '/viewcustomerorder'});
             })
             .catch(() => {
                 alert("Customer Order creation failed");

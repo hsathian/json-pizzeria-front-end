@@ -12,14 +12,19 @@ let AddEmployee = () =>{
 
     let handleSubmit = (e) => {
         e.preventDefault();
-        let employee = {username: username}
-        //alert(JSON.stringify(customer))
-
-        EmployeeService.addEmployee(employee).then(() =>{
-            alert("Employee has been added successfully!")
-            navigate({pathname : '/viewemployees'});
+    
+        if (username.trim() === '') {
+            alert("Username cannot be empty. Please enter a username.");
+            return;
+        }
+    
+        let employee = { username: username };
+    
+        EmployeeService.addEmployee(employee).then(() => {
+            alert("Employee has been added successfully!");
+            navigate({ pathname: '/viewemployees' });
         }, () => {
-            alert("Employee creation failed")
+            alert("Employee creation failed");
         });
     }
     return(

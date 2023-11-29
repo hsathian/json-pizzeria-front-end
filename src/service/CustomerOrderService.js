@@ -3,19 +3,20 @@ import axios from "../axios-config";
 const baseUrl = "http://localhost:8080/api/customerorder"; // Fix: Added 'http://' to the base URL
 
 class CustomerOrderService {
-    // getAllEmployees() {
-    //     // Implement your logic to get all users
-    //     return axios.get(baseUrl)
-    //     .then(response => {
-    //         console.log("Full response:", response); // Log the data received from the server
-    //         console.log("Response data:", response.data);
-    //         return response.data; // Return the data to the calling component if needed
-    //     })
-    //     .catch(error => {
-    //         console.error("Error fetching customers:", error);
-    //         throw error; // You might want to handle errors differently in a production environment
-    //     });
-    // }
+    getAllCustomerOrder() {
+        // Implement your logic to get all users
+        return axios.get(baseUrl)
+        .then(response => {
+            console.log("Full response:", response); // Log the data received from the server
+            console.log("Response data:", response.data);
+            return response.data; // Return the data to the calling component if needed
+        })
+        .catch(error => {
+            console.error("Error fetching customers orders:", error);
+            throw error; // You might want to handle errors differently in a production environment
+        });
+    }
+
 
     addCustomerOrder(orderDto) {
         return axios.post(baseUrl, {

@@ -23,6 +23,14 @@ const ViewCustomer = () => {
     navigate({pathname: "/"})
 
   }
+  let handleViewCustomerOrder = () =>{
+    navigate({pathname: "/viewcustomerorder"})
+
+  }
+  let handleAddOrderDetail = () =>{
+    navigate({pathname: "/addorderdetail"})
+
+  }
 
   const originalTotalPrice = products.reduce((total, product) => {
     const productPriceWithoutDiscount = product.price * product.quantity;
@@ -46,9 +54,9 @@ const ViewCustomer = () => {
               <tr>
                 <th>Product Name</th>
                 <th>Description</th>
-                <th>Price ($)</th>
+                <th>Price</th>
                 <th>Quantity</th>
-                <th>Discount (%)</th>
+                <th>Discount</th>
               </tr>
             </thead>
             <tbody>
@@ -56,9 +64,9 @@ const ViewCustomer = () => {
                 <tr key={index}>
                 <td>{product.name}</td>
                 <td>{product.description}</td>
-                <td>{product.price}</td>
+                <td>${product.price}</td>
                 <td>{product.quantity}</td>
-                <td>{product.discount}</td>
+                <td>{product.discount}%</td>
                 <td>
                     {/* Add any buttons or actions related to each product here */}
                 </td>
@@ -78,6 +86,8 @@ const ViewCustomer = () => {
         <div>
         <p>Remaining Allowance: ${remainingAllowance.toFixed(2)}</p>
       </div>
+      <button className="btn btn-success form-control" onClick={handleAddOrderDetail}>Complete Order Detail</button>
+      <button className="btn btn-warning form-control" onClick={handleViewCustomerOrder}>Back</button>
           <button className="btn btn-danger form-control" onClick={handleViewHome}>Exit</button>
         </>
       );      

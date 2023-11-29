@@ -53,7 +53,7 @@ let UpdateEmployee = () => {
 
   return (
     <>
-    <h2>Update Customer Information</h2>
+    <h2>Update Employee Information</h2>
       <form onSubmit={handleSubmit}>
         <label>
           Employee ID:{" "}

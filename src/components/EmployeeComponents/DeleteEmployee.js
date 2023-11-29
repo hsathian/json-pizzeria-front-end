@@ -8,7 +8,7 @@ let DeleteEmployee = () =>{
 
     useEffect(()=>{
         EmployeeService.deleteEmployee(location.state.employee_id).then((response) => {
-            alert('Employee ID' + location.state.employee_id + 'has been deleted successfully!')
+            alert('Employee ID ' + location.state.employee_id + ' has been deleted successfully!')
             navigate({pathname : "/viewemployees"})
         }, ()=>{})
     }, []);

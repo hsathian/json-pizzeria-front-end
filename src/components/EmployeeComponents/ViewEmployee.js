@@ -64,7 +64,7 @@ const ViewEmployee = () => {
                     <td>{employee.username}</td>
                     <td>
                       <button className="btn btn-warning" onClick={()=>{handleUpdateEmployee(employee.employee_id)}}>Update</button>
-                      <button className="btn btn-danger" onClick={()=>{handleDeleteEmployee(employee.employee_id)}}>Delete</button>
+                      <button className="btn btn-danger" onClick={()=>{handleDeleteEmployee(employee.employee_id)}}>Fire</button>
                     </td>
                   </tr>
                 ))

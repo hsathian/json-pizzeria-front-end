@@ -11,8 +11,7 @@ const HomePage = () => {
 
       <HomePageLinkContainer>
         <Link to="/admin">Admin</Link>
-        <Link to="/viewcustomers">Customers</Link>
-        <Link to="/viewProducts">Products</Link>
+        <Link to="/viewcustomers">Employee</Link>
       </HomePageLinkContainer>
     </HomePageContainer>
   );

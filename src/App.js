@@ -14,6 +14,11 @@ import DeleteEmployee from './components/EmployeeComponents/DeleteEmployee';
 import Admin from './components/Admin';
 import ViewProducts from './components/ProductComponent/ViewProducts.js'
 import AddCustomerOrder from './components/CustomerOrderComponent/AddCustomerOrder';
+import ViewCustomerOrder from './components/CustomerOrderComponent/ViewCustomerOrder';
+import ViewOrderDetail from './components/OrderDetailComponent/ViewOrderDetail';
+import AddOrderDetail from './components/OrderDetailComponent/AddOrderDetail';
+
+
 
 function App() {
   return (
@@ -39,8 +44,11 @@ function App() {
       {/* Product Table Routes*/}
       <Route path = {"/viewproducts"} element = {<ViewProducts/>} exact={true}/> 
       {/* Customer Order Routes*/}
-      <Route path = {"/createorder"} element = {<AddCustomerOrder/>} exact={true}/> 
+      <Route path = {"/viewcustomerorder"} element = {<ViewCustomerOrder/>} exact={true}/> 
+      <Route path = {"/createcustomerorder"} element = {<AddCustomerOrder/>} exact={true}/> 
       {/* Order Detail Table Routes*/}
+      <Route path = {"/vieworderdetail"} element = {<ViewOrderDetail/>} exact={true}/> 
+      <Route path = {"/addorderdetail"} element = {<AddOrderDetail/>} exact={true}/> 
     </Routes>
     </BrowserRouter>
     </>

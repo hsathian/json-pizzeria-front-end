@@ -44,7 +44,7 @@ const ViewCustomer = () => {
 
   }
   let handleCustomerOrder = () =>{
-    navigate({pathname: "/createorder"})
+    navigate({pathname: "/createcustomerorder"})
 
   }
 

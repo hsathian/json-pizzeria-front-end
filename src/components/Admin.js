@@ -11,7 +11,7 @@ const Admin = () => {
       <AdminPageLinkContainer>
       <Link to="/">Home</Link> 
         <Link to="/viewemployees">View Employees</Link>
-        <Link to="/vieworderdetails">View Order Details</Link> 
+        <Link to="/vieworderdetail">View Order Details</Link> 
       </AdminPageLinkContainer>
     </AdminPageContainer>
   );
